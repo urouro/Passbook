@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<title>Hello Passbook</title>
+</head>
+<body>
+
+<div data-role="page">
+
+<div data-role="header">
+<h1>Hello Pass</h1>
+</div>
+
+<div data-role="content">
+
+<form name="fm" action="pass.php" method="POST" data-ajax="false">
+<h3>表</h3>
+ロゴ<input type="text" name="logoText" value="" data-mini="true"  /><br />
+タイトル<input type="text" name="primaryValue" value="" data-mini="true" /><br />
+サブタイトル<input type="text" name="primaryLabel" value=""　data-mini="true" /><br />
+文字色<br />
+R<input type="range" name="foreground-r" value="30" min="0" max="255" data-mini="true" /><br />
+G<input type="range" name="foreground-g" value="30" min="0" max="255" data-mini="true" /><br />
+B<input type="range" name="foreground-b" value="30" min="0" max="255" data-mini="true" /><br />
+背景色<br />
+R<input type="range" name="background-r" value="206" min="0" max="255" data-mini="true" /><br />
+G<input type="range" name="background-g" value="140" min="0" max="255" data-mini="true" /><br />
+B<input type="range" name="background-b" value="53" min="0" max="255" data-mini="true" /><br />
+バーコード形式:<br />
+<input type="radio" name="barcode" id="barcode-1" value="1" checked="checked" />
+<label for="barcode-1">PKBarcodeFormatQR,</label>
+<input type="radio" name="barcode" id="barcode-2" value="2"  />
+<label for="barcode-2">PKBarcodeFormatPDF417</label>
+<input type="radio" name="barcode" id="barcode-3" value="3"  />
+<label for="barcode-3">PKBarcodeFormatAztec</label>
+<input type="radio" name="barcode" id="barcode-4" value="4"  />
+<label for="barcode-4">PKBarcodeFormatText</label>
+<br />
+<h3>裏</h3>
+WebサイトURL<input type="text" name="website" value="" data-mini="true"  /><br />
+<input type="submit" value="Passを作る" />
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
